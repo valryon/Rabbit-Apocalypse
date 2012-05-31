@@ -1,4 +1,14 @@
-Rabbit-Apocalypse-
+Rabbit Apocalypse!
 ==================
 
-Source code for the little free XNA game "Rabbit Apocalypse!"
+This repository contains the source code for the little free XNA game "Rabbit Apocalypse!".
+
+THe game was created in 3 months using XNA and Ogmo Editor http://www.ogmoeditor.com/ (in an old version). 
+So you will need:
+- XNA 4.0
+- Ogmo Editor in its last Adobe Air version (I think it has been lost forever)
+- to install the font Resources/Fonts/stan0765.ttf to your fonts.
+
+All songs are from Spintronic, you can listen and download them for free here: http://www.chiptunes-headbangers.net/Spintronic.
+
+Feel free to contact me for further information.
