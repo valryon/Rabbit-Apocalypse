@@ -1,0 +1,106 @@
+<project>
+  <name>LAPINS</name>
+  <settings>
+    <defaultWidth>1024</defaultWidth>
+    <defaultHeight>768</defaultHeight>
+    <minWidth>100</minWidth>
+    <minHeight>768</minHeight>
+    <maxWidth>9600</maxWidth>
+    <maxHeight>7200</maxHeight>
+    <workingDirectory>..\gfxs</workingDirectory>
+  </settings>
+  <values>
+    <string name="title" default="new level" maxChars="50" />
+    <integer name="id" default="1" min="1" />
+    <integer name="max_repeat" default="1" min="1" />
+    <text name="description" default="Hello world!" maxChars="520" />
+  </values>
+  <tilesets>
+    <tileset name="bg_tileset" image="tiles/ground.png" tileWidth="32" tileHeight="32" />
+  </tilesets>
+  <objects>
+    <object name="input" image="objects/oinput.png" width="32" height="32" limit="1">
+      <values>
+        <integer name="id" default="1" min="0"/>
+      </values>
+    </object>
+    <object name="output" image="objects/ooutput.png" width="32" height="32" limit="1">
+      <values>
+        <integer name="id" default="1" min="0"/>
+      </values>
+    </object>
+    <object name="checkpoint" image="objects/ocheckpoint.png" width="64" height="64" />
+    <object name="spikes_floor" image="objects/ospikesFloor.png" width="32" height="32" />
+    <object name="spikes_ceiling" image="objects/ospikesCeiling.png" width="32" height="32" />
+    <object name="spikes_left" image="objects/ospikesLeft.png" width="32" height="32" />
+    <object name="spikes_right" image="objects/ospikesRight.png" width="32" height="32" />
+    <object name="coin" image="objects/ocoin.png" width="16" height="16" />
+    <object name="spawn" image="objects/ospawn.png" width="32" height="32" limit="1"/>
+    <object name="ship" image="objects/oship.png" width="192" height="192" limit="1"/>
+    <object name="keysSpawn" image="objects/okeysSpawn.png" width="32" height="32"/>
+    <object name="letterSpawn" image="objects/oletterSpawn.png" width="32" height="32"/>
+    <object name="life" image="objects/olife.png" width="16" height="16"/>
+    <object name="wolftrap" image="objects/owolfTrap.png" width="32" height="32"/>
+    <object name="terrier" image="objects/oterrier.png" width="128" height="128"/>
+    <object name="pancarte" image="objects/opancarte.png" width="64" height="64">
+      <values>
+        <text name="text" default="JE SUIS UNE PATATE" maxChars="200" />
+        <boolean name="isControl" default="false" />
+      </values>
+    </object>
+    <object name="box" image="objects/obox.png" width="64" height="64">
+      <values>
+        <boolean name="flip" default="false" />
+      </values>
+    </object>
+    <object name="platform" image="objects/oplatform.png" width="64" height="16">
+      <values>
+        <number name="speed" min="10" max="1000" default="100" />
+      </values>
+      <nodes drawObject="true" limit="10" lineMode="1"/>
+    </object>
+    <object name="small_platform" image="objects/oplatform.png" width="32" height="16">
+      <values>
+        <number name="speed" min="10" max="1000" default="100" />
+      </values>
+      <nodes drawObject="true" limit="10" lineMode="1"/>
+    </object>
+    <object name="big_platform" image="objects/oplatform.png" width="96" height="32">
+      <values>
+        <number name="speed" min="10" max="300" default="500" />
+      </values>
+      <nodes drawObject="true" limit="10" lineMode="1"/>
+    </object>
+    <object name="bumper" image="objects/obumper.png" width="32" height="32"/>
+    <object name="bumper_left" image="objects/obumper_left.png" width="32" height="32"/>
+    <object name="bumper_right" image="objects/obumper_right.png" width="32" height="32"/>
+    <object name="bumper_down" image="objects/obumper_down.png" width="32" height="32"/>
+    <object name="travelator" image="objects/otravelator.png" width="64" height="16">
+      <values>
+        <number name="speed" min="100" max="1000" default="500" />
+        <boolean name="goRight" default="false" />
+      </values>
+    </object>
+    <object name="smoke_generator" image="objects/osmoke_generator.png" width="16" height="16">
+      <values>
+        <integer name="minRangeX" min="-500" max="500" default="-100" />
+        <integer name="maxRangeX" min="-1000" max="1000" default="100" />
+        <integer name="minRangeY" min="-500" max="500" default="-100" />
+        <integer name="maxRangeY" min="-1000" max="1000" default="100" />
+        <number name="frequency" min="100" max="5000" default="500" />
+        <number name="minSize" min="0.1" max="3" default="1" />
+        <number name="maxSize" min="0.1" max="3" default="1" />
+        <boolean name="isBackground" default="false" />
+      </values>
+    </object>
+  </objects>
+  <layers>
+    <tiles name="background" gridSize="32"  />
+    <objects name="background_objects" gridSize="32" />
+    <grid name="collision" gridSize="16" exportAsObjects="true" />
+    <tiles name="floor" gridSize="32"  />
+    <objects name="static_objects" gridSize="32" />
+    <objects name="objects" gridSize="16" />
+    <tiles name="foreground" gridSize="32"  />
+  </layers>
+</project>
